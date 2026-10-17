@@ -11,3 +11,5 @@
 *.so binary
 *.png binary
 *.zip binary
+# Preserve the bundled third-party licence verbatim, including its terminal blank line.
+构建脚本/v3/v3_026/licenses/Apache-2.0.txt whitespace=-blank-at-eof

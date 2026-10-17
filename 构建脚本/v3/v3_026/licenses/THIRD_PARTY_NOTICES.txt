@@ -1,0 +1,41 @@
+Third-party notices — bt192.auto minimal candidate
+
+This file concerns bundled third-party portions only. It does not select a
+licence for the project's own code or claim that APK slimming makes all code
+newly original.
+
+1. Android Hidden API Bypass (selected implementation and helper classes)
+   Upstream: https://github.com/LSPosed/AndroidHiddenApiBypass
+   Upstream public notice: Copyright (C) 2021-2025 LSPosed.
+   Licence: Apache License, Version 2.0; text bundled as Apache-2.0.txt.
+   The selected class code is retained from the exact tested022 APK without
+   changing its method, field or annotation semantics. Optional LSPass and its
+   unused generated BuildConfig are not bundled. The exact upstream binary
+   release could not be independently authenticated from the bundled version
+   metadata; see selection_identity.json and project verification records.
+   This library does not require the separate LSPosed framework or root.
+
+2. AndroidX Core graphics PathParser (three-class subset)
+   Upstream: https://android.googlesource.com/platform/frameworks/support/
+   Copyright: The Android Open Source Project and its contributors.
+   Licence: Apache License, Version 2.0; text bundled as Apache-2.0.txt.
+   The parent APK labels AndroidX Core as1.16.0. Only PathParser and its two
+   nested implementation classes are bundled, without method/field/annotation
+   changes. This is not a claim that the whole Core/AppCompat/Material stack
+   is included or required, nor an independent authentication of its Maven jar.
+
+3. User-supplied BT192 Switch artwork (candidate2, no LHDC logo/text)
+   Original PNG SHA256:
+   d421ed2d21542f3f114fc5023962df4b854435eed648245e0a7165eedf929efe
+   Supplied and selected by the project owner for repository distribution.
+   The prepared bitmap only crops outside transparent padding; its retained
+   pixels are not redrawn. Prior raster editing/reconstruction was performed
+   before delivery, as recorded in artwork/ORIGIN.md. No claim of a vector
+   original or of zero third-party rights is made. No third-party logo is
+   bundled in this icon. This notice does not grant a separate artwork licence.
+
+The standard Apache2 licence body was recovered from the local archive rather
+than downloaded: public source searches identified the upstream licence, but
+full web fetches were unavailable in this environment. Version/provenance and
+any additional upstream NOTICE obligations remain explicit release checks.
+No copyright/licence statement is removed to disguise source provenance.

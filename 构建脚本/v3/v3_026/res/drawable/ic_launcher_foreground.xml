@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Counter adaptive-icon extra inset, keeping supplied artwork/text in view. -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android" android:inset="16.666667%">
+    <bitmap android:src="@7F070097" android:gravity="fill" android:filter="true" />
+</inset>

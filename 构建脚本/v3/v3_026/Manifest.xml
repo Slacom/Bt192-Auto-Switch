@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="bt192.auto" android:versionName="3" android:versionCode="68">
+    <uses-sdk android:minSdkVersion="33" android:targetSdkVersion="37" />
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false" />
+    <uses-feature android:name="android.software.companion_device_setup" android:required="false" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.REQUEST_COMPANION_APP_WHEN_IN_BACKGROUND" />
+    <uses-permission android:name="android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND" />
+    <uses-permission android:name="android.permission.REQUEST_COMPANION_SELF_MANAGED" />
+    <application android:name="bt192.auto.AutoApp" android:label="@7F0F001D" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:icon="@7F0D0000" android:roundIcon="@7F0D0001" android:allowBackup="false" android:debuggable="false" android:enableOnBackInvokedCallback="true">
+        <activity android:name="bt192.auto.V3Setup" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboardHidden" android:exported="true" android:excludeFromRecents="false" android:noHistory="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name="bt192.auto.CdmService" android:permission="android.permission.BIND_COMPANION_DEVICE_SERVICE" android:exported="true">
+            <intent-filter><action android:name="android.companion.CompanionDeviceService" /></intent-filter>
+        </service>
+        <service android:name="bt192.auto.WatchService2" android:label="BT192 Switch 自动切换" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:exported="true">
+            <intent-filter><action android:name="android.accessibilityservice.AccessibilityService" /></intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@7F120000" />
+        </service>
+    </application>
+</manifest>

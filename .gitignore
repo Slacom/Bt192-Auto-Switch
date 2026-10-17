@@ -1,39 +1,20 @@
-# GitHub uses an allow-list. Local archives remain available, but are not uploaded.
+# Public tree allow-list. Keep local experiments, audit evidence and handoffs private.
 /*
 !/.gitignore
 !/.gitattributes
 !/README.md
-!/AGENTS.md
 !/文档/
 !/构建脚本/
-!/工具/
 
-# Public docs: current work only; old docs contain device data and raw evidence links.
 /文档/*
-!/文档/016实测反馈_连接秒切回归与拖拽动画_修改计划.md
-!/文档/GitHub上传与仓库整理说明.md
+!/文档/仓库使用与验证边界.md
 
-# Current source and the frozen015 negative-control input required by the tests.
 /构建脚本/*
 !/构建脚本/v3/
 /构建脚本/v3/*
-!/构建脚本/v3/v3_016/
-!/构建脚本/v3/v3_015/
-/构建脚本/v3/v3_015/*
-!/构建脚本/v3/v3_015/V3DeviceScroll.smali
+!/构建脚本/v3/v3_026/
 
-# MT helper plus the non-private limited-review narrative.
-/工具/*
-!/工具/mtmcp.py
-!/工具/v3审查/
-/工具/v3审查/*
-!/工具/v3审查/v3_016/
-/工具/v3审查/v3_016/*
-!/工具/v3审查/v3_016/最终裁决/
-/工具/v3审查/v3_016/最终裁决/*
-!/工具/v3审查/v3_016/最终裁决/016独立逻辑槽位增量裁决.md
-
-# Fail closed for generated binaries, local service sessions and signing secrets.
+# Generated build outputs and signing/authentication secrets are never public inputs.
 **/__pycache__/
 *.py[cod]
 *.apk
